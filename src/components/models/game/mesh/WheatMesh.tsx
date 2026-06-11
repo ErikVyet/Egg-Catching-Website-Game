@@ -6,7 +6,7 @@ import { clone } from "three/examples/jsm/utils/SkeletonUtils.js";
 
 type WheatMeshProps = {
     scene: Group<Object3DEventMap>,
-    animations?: AnimationClip[],
+    animations?: AnimationClip[] | undefined,
     position?: Vector3 | [number, number, number],
     rotation?: Euler | [number, number, number]
 }

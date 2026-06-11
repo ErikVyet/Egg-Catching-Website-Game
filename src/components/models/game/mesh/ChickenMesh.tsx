@@ -6,7 +6,7 @@ import { RigidBody } from "@react-three/rapier";
 
 type ChickenMeshProps = {
     scene: Group<Object3DEventMap>,
-    animations?: AnimationClip[],
+    animations?: AnimationClip[] | undefined,
     position?: Vector3 | [number, number, number],
 }
 
