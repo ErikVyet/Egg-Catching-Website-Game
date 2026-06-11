@@ -10,7 +10,7 @@ type HaystackMeshProps = {
 }
 
 function HaystackMesh({ variant = "pile", position = [0, 0, 0], scale, rotation = [0, 0, 0] }: HaystackMeshProps) {
-    const src = variant === "pile" ? "/public/models/haystack.glb" : "/public/models/haystack2.glb";
+    const src = variant === "pile" ? "/models/haystack.glb" : "/models/haystack2.glb";
 
     return (
         <RigidBody type="fixed" colliders="hull" position={position} rotation={rotation} scale={scale}>

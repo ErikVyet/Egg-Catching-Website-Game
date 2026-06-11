@@ -18,7 +18,7 @@ function GameScene() {
     if (!gameContext) return null;
     const { state, setState, setEgg, setGoldenEgg, score, setScore } = gameContext;
 
-    const chickenModel = useGLTF("/public/models/chicken.glb");
+    const chickenModel = useGLTF("/models/chicken.glb");
 
     const [eggs, setEggs] = useState<Egg[]>([]);
 
@@ -121,6 +121,6 @@ function GameScene() {
     );
 }
 
-useGLTF.preload("/public/models/chicken.glb");
+useGLTF.preload("/models/chicken.glb");
 
 export default GameScene;

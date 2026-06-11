@@ -10,7 +10,7 @@ type TractorMeshProps = {
 function TractorMesh({ position = [0, 0, 0], rotation = [0, 0, 0] }: TractorMeshProps) {
     return (
         <RigidBody type="fixed" colliders="hull" position={position} scale={0.5} rotation={rotation}>
-            <Gltf src={"/public/models/tractor.glb"} castShadow />
+            <Gltf src={"/models/tractor.glb"} castShadow />
         </RigidBody>
     );
 }

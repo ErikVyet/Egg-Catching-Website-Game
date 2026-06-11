@@ -18,7 +18,7 @@ function EggMesh({ variant = "normal", position, id, onRemove }: EggMeshProps) {
     if (!gameContext) return null;
     const { state } = gameContext;
 
-    const { scene } = useGLTF("/public/models/egg.glb");
+    const { scene } = useGLTF("/models/egg.glb");
 
     const cloneScene = useMemo(() => clone(scene), [scene]);
 
@@ -60,6 +60,6 @@ function EggMesh({ variant = "normal", position, id, onRemove }: EggMeshProps) {
     );
 }
 
-useGLTF.preload("/public/models/egg.glb");
+useGLTF.preload("/models/egg.glb");
 
 export default EggMesh;

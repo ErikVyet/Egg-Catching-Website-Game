@@ -69,7 +69,7 @@ function BucketMesh({ range, pointerPositionScale, onEggCaught }: BucketMeshProp
                     setTimeout(() => caughtEggsRef.current.delete(eggId), 500);
                 }
             }}>
-            <Gltf src={"/public/models/bucket.glb"} castShadow onPointerDown={handleGrabbing} onPointerUp={handleReleasing} />
+            <Gltf src={"/models/bucket.glb"} castShadow onPointerDown={handleGrabbing} onPointerUp={handleReleasing} />
         </RigidBody>
     );
 }

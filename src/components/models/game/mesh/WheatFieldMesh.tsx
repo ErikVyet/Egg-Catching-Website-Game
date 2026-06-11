@@ -9,7 +9,7 @@ type WheatFieldMeshProps = {
 }
 
 function WheatFieldMesh({ position = [0, 0, 0] }: WheatFieldMeshProps) {
-    const wheatModel = useGLTF("/public/models/wheat.glb");
+    const wheatModel = useGLTF("/models/wheat.glb");
     
     return (
         <group position={position}>
@@ -18,6 +18,6 @@ function WheatFieldMesh({ position = [0, 0, 0] }: WheatFieldMeshProps) {
     );
 }
 
-useGLTF.preload("/src/assets/models/wheat.glb");
+useGLTF.preload("/models/wheat.glb");
 
 export default WheatFieldMesh;
