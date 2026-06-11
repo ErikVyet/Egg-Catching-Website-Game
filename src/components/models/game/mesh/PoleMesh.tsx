@@ -11,7 +11,7 @@ type PoleMeshProps = {
 }
 
 function PoleMesh({ width, height, depth, wide }: PoleMeshProps) {
-    const [map] = useTexture(["/src/assets/images/wood_texture.jpg"]);
+    const [map] = useTexture(["/public/images/wood_texture.jpg"]);
 
     const materialRef = useRef<MeshStandardMaterial>(null!);
 

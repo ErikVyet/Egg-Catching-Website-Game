@@ -9,7 +9,7 @@ type WheatFieldMeshProps = {
 }
 
 function WheatFieldMesh({ position = [0, 0, 0] }: WheatFieldMeshProps) {
-    const wheatModel = useGLTF("/src/assets/models/wheat.glb");
+    const wheatModel = useGLTF("/public/models/wheat.glb");
     
     return (
         <group position={position}>

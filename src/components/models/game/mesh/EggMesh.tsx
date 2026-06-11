@@ -18,11 +18,14 @@ function EggMesh({ variant = "normal", position, id, onRemove }: EggMeshProps) {
     if (!gameContext) return null;
     const { state } = gameContext;
 
-    const { scene } = useGLTF("/src/assets/models/egg.glb");
+    const { scene } = useGLTF("/public/models/egg.glb");
+
     const cloneScene = useMemo(() => clone(scene), [scene]);
 
     useEffect(() => {
         cloneScene.traverse((child) => {
+            child.receiveShadow = true;
+            child.castShadow = true;
             if (child instanceof Mesh && child.material instanceof MeshStandardMaterial) {
                 child.material = child.material.clone();
                 if (variant === "golden") {
@@ -50,11 +53,13 @@ function EggMesh({ variant = "normal", position, id, onRemove }: EggMeshProps) {
                 }
             }}
         >
-            <primitive object={cloneScene} />
+            <group>
+                <primitive object={cloneScene} />
+            </group>
         </RigidBody>
     );
 }
 
-useGLTF.preload("/src/assets/models/egg.glb");
+useGLTF.preload("/public/models/egg.glb");
 
 export default EggMesh;
